@@ -1,0 +1,49 @@
+<header class="bg-black">
+  <div class="container nav-container">
+    <div class="row row-nav">
+
+      <ul class="row-nav-ul">
+        <li class="nav-option-left nav-padding-indivar">
+          <a href="" routerLink="/" class="nav-option">Indivar</a>
+        </li>
+        <li *ngIf="!isLogged" class="nav-option-right">
+          <button type="button" class="btn btn-entrar" (click)="loginModal.show()">E n t r a r</button>
+        </li>
+        <li *ngIf="isLogged" class="nav-option-right nav-padding-sair nav-cursor">
+          <span class="nav-option" (click)="logout()">Sair</span>
+        </li>
+        <li *ngIf="isLogged" class="nav-option-right nav-padding nav-cursor">
+          <span class="nav-option" routerLink="/compare">Comparar</span>
+        </li>
+      </ul>
+
+      <!--div class="nav-option-left">
+        <a href="" routerLink="/" class="nav-option">Indivar</a>
+      </div>
+
+      <div class="nav-option-right">
+        <button type="button" class="btn btn-entrar">Entrar</button>
+      </div>
+
+      <!--div class="col-12 col-md-7">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand d-flex d-md-none align-items-center " href="#">
+            <img src="/assets/logo.png" class="img-fluid logo" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" (click)="isHide=!isHide" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse font-weight-bolder justify-content-between" id="navbarNavAltMarkup" [class.hide]="isHide" [class.show]="!isHide">
+            <div class="mx-0">
+              <a class="nav-item nav-link active" routerLink="/about">SOBRE NÓS</a>
+            </div>
+          </div>
+        </nav>
+      </div-->
+
+    </div>
+  </div>
+</header>
+
+<!--app-modal-card *ngIf="user" [userData]="user"></app-modal-card-->
+<app-modal-login #loginModal></app-modal-login>

@@ -1,0 +1,30 @@
+form {
+  color: #757575;
+}
+
+.remember {
+  min-width: 160px;
+}
+
+.input-login {
+  height: calc(2.8em + 0.75rem + 2px);
+}
+
+.login-label {
+  float: left;
+}
+
+.login-button{
+  background-color: #319af5!important;
+  color:#fff;
+  font-size: 1rem;
+  width: 80%;
+  border-radius: 0.3rem;
+}
+
+.login-esqueceu {
+  float: right;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-bottom: 40px;
+}

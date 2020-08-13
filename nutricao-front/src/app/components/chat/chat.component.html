@@ -1,0 +1,68 @@
+<div class="wrapper pr-2 pr-md-4">
+  <div class="icon-message position-relative" *ngIf="!isOpen" (click)="isOpen = true; updateScroll();">
+    <span class="fa-stack fa-2x">
+      <i class="fa fa-comment fa-stack-2x icon"></i>
+      <strong class="fa-stack-1x fa-stack-text fa-inverse counter">?</strong>
+    </span>
+  </div>
+  <div *ngIf="isOpen" class="frame pl-3 pl-md-0">
+    <div class="card card-cascade opacity-100">
+
+      <div class="view view-cascade overlay border-bottom px-2 pt-2 header" (click)="isOpen = false">
+        <h4 class="title-chat">
+          CONVERSE CONOSCO
+          <i class="fas fa-caret-down"></i>
+        </h4>
+      </div>
+
+      <div id="messageid" class="messages">
+        <div *ngFor="let message of messages; let i = index" class="card-body card-body-cascade text-center">
+
+          <div id="i" class="{{message.person}}">
+            <p>{{message.text}}</p>
+            <span class="time">{{formatCreatedAt(message.created_at)}}</span>
+          </div>
+  
+          <!--div class="message me">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            <span class="time">08:15</span>
+          </div>
+          <div class="message other">
+            <p>totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+            <span class="time">15/09/19 13:29</span>
+          </div>
+          <div class="message other">
+            <p>totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+          </div-->
+
+        </div>
+      </div>
+
+      <!-- Card footer -->
+      <div class="card-footer text-muted text-center">
+        <div class="input-group">
+          <input
+            [(ngModel)]="textMessage" 
+            (keyup.enter)="sendMessage()"
+            type="text" 
+            class="form-control" 
+            placeholder="Digite sua mensagem" 
+            aria-label="Digite sua mensagem" 
+            aria-describedby="button-addon2">
+
+          <div class="input-group-append">
+            <button 
+              class="btn btn-md btn-outline-default m-0 px-3 py-2 waves-effect"   
+              type="button" 
+              (click)="sendMessage()">
+              Enviar
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Card Regular -->
+
+  </div>
+</div>

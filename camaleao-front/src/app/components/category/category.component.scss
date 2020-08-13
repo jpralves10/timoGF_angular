@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/bootstrap-grid";
+
+
+img {
+  max-height: 70px;
+}
+
+p {
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+
+.selected {
+  img {
+    border: 2px solid #015B9C;
+  }
+  p {
+    color: #015B9C !important;
+  }
+}
+
+
+@include media-breakpoint-up(sm) {
+  img {
+    max-height: 100px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+}
+
+@include media-breakpoint-up(md) {
+  img {
+    max-height: 130px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  img {
+    max-height: 150px;
+  }
+}

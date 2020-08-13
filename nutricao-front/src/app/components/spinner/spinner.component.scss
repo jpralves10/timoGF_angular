@@ -1,0 +1,23 @@
+@import "~bootstrap/scss/bootstrap-grid";
+
+.spinner {
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border-left-color: #22a6b3;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg);}
+}
+
+@include media-breakpoint-up(md) {
+  .spinner {
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+    border-left-color: #22a6b3;
+    width: 160px;
+    height: 160px;
+  }
+}

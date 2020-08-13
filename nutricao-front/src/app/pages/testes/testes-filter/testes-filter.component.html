@@ -1,0 +1,99 @@
+<div #filterModal="bs-modal" bsModal class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myBasicModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog d-flex justify-content-center" role="document">
+            <app-spinner-overlay [showSpinner]="loading">
+
+                <div class="wrapper">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close pull-left" aria-label="Close" (click)="hide()">
+                                <span class="close-x" aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12 mx-auto login d-flex body-class">
+                                <div class="text-center justify-content-center align-self-center mx-auto modal-entrar">
+                                    <span class="pb-3 title title-class">Filtrar</span>
+
+                                    <div>
+                                        <div class="form-group group-class">
+                                            <label for="loginNome" class="login-label label-class">Cultura</label>
+                                            <div class="input-right">
+                                                <select class='form-control input-login' [(ngModel)]="model.cultura">
+                                                    <option value="" selected>Selecionar cultura</option>
+                                                    <option 
+                                                        *ngFor="let cultura of culturas; let i = index"
+                                                        [value]="cultura.title">
+                                                        {{cultura.title.charAt(0).toUpperCase() + cultura.title.substr(1).toLowerCase()}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group group-class">
+                                            <label for="dataInicial" class="login-label label-class">Data Inicial</label>
+                                            <div class="input-group input-right">
+                                                <input 
+                                                    type="nome" 
+                                                    id="dataInicial" 
+                                                    name="nome" 
+                                                    placeholder="Selecionar data"
+                                                    class="form-control input-login"
+                                                    mdbInput 
+                                                    ngbDatepicker 
+                                                    #d1="ngbDatepicker"
+                                                    (click)="d1.toggle()"
+                                                    [(ngModel)]="model.dataInicial" 
+                                                    nome>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group group-class">
+                                            <label for="dataFinal" class="login-label label-class">Data Final</label>
+                                            <div class="input-right">
+                                                <input 
+                                                    type="endereco" 
+                                                    id="dataFinal" 
+                                                    name="endereco"
+                                                    placeholder="Selecionar data"
+                                                    class="form-control input-login" 
+                                                    mdbInput 
+                                                    ngbDatepicker 
+                                                    #d2="ngbDatepicker"
+                                                    (click)="d2.toggle()"
+                                                    [(ngModel)]="model.dataFinal" 
+                                                    endereco >
+                                            </div>
+                                        </div>
+
+                                        <button 
+                                            mdbBtn 
+                                            block="true" 
+                                            class="my-4 mx-auto login-button limpar-class" 
+                                            type="submit" 
+                                            (click)="limparForm()">
+                                            LIMPAR
+                                        </button>
+
+                                        <button 
+                                            mdbBtn 
+                                            block="true" 
+                                            class="my-4 mx-auto login-button" 
+                                            type="submit" 
+                                            (click)="filtarForm()">
+                                            FILTRAR
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </app-spinner-overlay>
+        </div>
+
+</div>

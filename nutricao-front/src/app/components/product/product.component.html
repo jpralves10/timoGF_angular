@@ -1,0 +1,21 @@
+<mdb-card>
+  <div class="row no-gutters">
+  <!--Card image-->
+    <mdb-card-img [src]="getImage()" (error)="setPlaceholder()" class="col-4 col-sm-12"></mdb-card-img>
+    <!--Card content-->
+    <mdb-card-body class="col-8 col-sm-12 p-2 p-sm-4">
+
+      <!--Title-->
+      <mdb-card-title>
+        <p class="mb-2">{{ product.produto_nome }}</p>
+      </mdb-card-title>
+
+      <!--Text-->
+      <mdb-card-text>
+        <div class="mb-2 resumo" [innerHTML]="getResumo()"></div>
+      </mdb-card-text>
+
+      <a href="javascript:" color="primary" [routerLink]="'/product/' + product.produto_id">LER MAIS</a>
+    </mdb-card-body>
+  </div>
+</mdb-card>

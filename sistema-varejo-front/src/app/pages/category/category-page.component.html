@@ -1,0 +1,5 @@
+<app-banner></app-banner>
+<app-carousel-category [selectedCategory]="category" [categories]="categories" [subCategories]="subCategories"></app-carousel-category>
+<app-spinner-overlay [showSpinner]="loadingProducts">
+    <app-list-product [products]="products" [showSeeMore]="showSeeMore" (onSeeMore)="addProducts()"></app-list-product>
+</app-spinner-overlay>

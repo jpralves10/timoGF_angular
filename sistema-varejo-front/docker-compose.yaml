@@ -1,0 +1,11 @@
+version : '3.7'
+services:
+  ssg:
+    image: node:12.9.1-alpine
+    container_name: ssg
+    volumes:
+      - ./:/app
+    working_dir: /app
+    ports:
+      - 8080:4200
+    command: /bin/sh -c "npm install && npm i -g @angular/cli@8.2.2 && ng serve --host 0.0.0.0"

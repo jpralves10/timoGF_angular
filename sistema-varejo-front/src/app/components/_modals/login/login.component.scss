@@ -1,0 +1,119 @@
+.login {
+  //margin-top: 150px;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.wrapper{
+  width: 700px;
+  padding-top: 170px;
+}
+
+.modal-header .close {
+  padding: 1rem 0.5rem;
+  margin: -1rem -1rem -1rem 0;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0 1rem 4rem;
+}
+
+.modal-entrar {
+  width: 60%;
+}
+
+.close-x {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+  outline: 0;
+}
+
+.login-cadastre{
+  color: #757575;
+  font-size: 1.1rem;
+  font-weight: 200;
+  margin-top: 60px;
+  display: block;
+}
+
+.login-cadastre-link {
+  color: #319af5!important;
+  font-weight: 600;
+}
+
+.esqueceu-text{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Modal Atalho */
+
+.modal-content-atalho{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+  outline: 0;
+}
+
+.wrapper-atalho{
+  width: 400px;
+  padding-top: 300px;
+}
+
+.modal-body-atalho{
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+  padding: 25px;
+}
+
+.atalho-title{
+  display: block;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.atalho-text{
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.atalho-btn{
+  display: initial;
+  background-color: #319af5 !important;
+  color: #fff;
+  padding: 0.7rem 4rem;
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  font-size: 1rem;
+  align-content: center;
+  margin-bottom: 15px;
+}

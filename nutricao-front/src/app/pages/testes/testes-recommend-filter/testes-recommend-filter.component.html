@@ -1,0 +1,125 @@
+<div #filterModal="bs-modal" bsModal class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myBasicModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog d-flex justify-content-center" role="document">
+            <app-spinner-overlay [showSpinner]="loading">
+
+                <div class="wrapper">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close pull-left" aria-label="Close" (click)="hide()">
+                                <span class="close-x" aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12 mx-auto login d-flex body-class">
+                                <div class="text-center justify-content-center align-self-center mx-auto modal-entrar">
+                                    <span class="pb-3 title title-class">Filtrar</span>
+
+                                    <div>
+                                        <div class="filtro-colons">
+                                            <div>
+                                                <div class="form-group group-class">
+                                                    <label class="login-label label-class">Categorias Disponíveis:</label>
+                                                    <div class="select-div">
+                                                        <span 
+                                                            *ngFor="let categoria of categoriasDisponiveis"
+                                                            [className]="categoria.select ? 'select-span-active' : 'select-span'" 
+                                                            (click)="selectOption(categoria)">
+                                                            {{categoria.title}}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="select-icons">
+                                                <span class="span-icon" (click)="enviarCategoriasSelecionadas()">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </span>
+                                                <span class="span-icon" (click)="enviarCategoriasDisponiveis()">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <div class="form-group group-class">
+                                                    <label class="login-label label-class">Categorias Selecionadas:</label>
+                                                    <div class="select-div">
+                                                        <span 
+                                                            *ngFor="let categoria of categoriasSelecionadas"
+                                                            [className]="categoria.select ? 'select-span-active' : 'select-span'" 
+                                                            (click)="selectOption(categoria)">
+                                                            {{categoria.title}}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filtro-colons">
+                                            <div>
+                                                <div class="form-group group-class">
+                                                    <label class="login-label label-class">Elementos Disponíveis:</label>
+                                                    <div class="select-div">
+                                                        <span 
+                                                            *ngFor="let categoria of elementosDisponiveis"
+                                                            [className]="categoria.select ? 'select-span-active' : 'select-span'" 
+                                                            (click)="selectOption(categoria)">
+                                                            {{categoria.title}}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="select-icons">
+                                                <span class="span-icon" (click)="enviarElementosSelecionados()">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </span>
+                                                <span class="span-icon" (click)="enviarElementosDisponiveis()">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <div class="form-group group-class">
+                                                    <label class="login-label label-class">Elementos Selecionadas:</label>
+                                                    <div class="select-div">
+                                                        <span 
+                                                            *ngFor="let categoria of elementosSelecionados"
+                                                            [className]="categoria.select ? 'select-span-active' : 'select-span'" 
+                                                            (click)="selectOption(categoria)">
+                                                            {{categoria.title}}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+
+                                        <!--button 
+                                            mdbBtn 
+                                            block="true" 
+                                            class="my-4 mx-auto login-button limpar-class" 
+                                            type="submit" 
+                                            (click)="limparForm()">
+                                            LIMPAR
+                                        </button-->
+
+                                        <button 
+                                            mdbBtn 
+                                            block="true" 
+                                            class="my-4 mx-auto login-button" 
+                                            type="submit" 
+                                            (click)="filtrarForm()">
+                                            FILTRAR
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </app-spinner-overlay>
+        </div>
+
+</div>

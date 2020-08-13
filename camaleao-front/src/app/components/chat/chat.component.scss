@@ -1,0 +1,88 @@
+.wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 0;
+
+  .icon-message {
+    cursor: pointer;
+
+    .icon {
+      color: #015B9C;
+      text-shadow: 0 0 5px #777;
+    }
+    .counter {
+      color: white;
+    }
+  }
+
+  .frame {
+    width: 300px;
+
+    .header {
+      cursor: pointer;
+    }
+
+    .messages {
+      max-height: 340px;
+      overflow-y: scroll;
+
+      .message {
+        width: 80%;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 8px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .time {
+          font-size: .7rem;
+        }
+      }
+
+      .me {
+        margin-left: 19%;
+        background-color: #9bd4f9;
+        text-align: right;
+      }
+
+      .other {
+        margin-right: 19%;
+        background-color: #D8D8D8;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .pr-md-4, .px-md-4 {
+    padding-right: 1.5rem !important;
+    z-index: 10000;
+  }
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 0;
+  z-index: 10000;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 0.8rem;
+}
+
+.title-chat {
+  font-weight: normal;
+  color: #6c757d !important;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px){
+  .title-chat {
+    font-size: 0.9rem;
+  }
+}

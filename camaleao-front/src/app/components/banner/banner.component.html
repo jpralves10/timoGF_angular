@@ -1,0 +1,11 @@
+<app-spinner-overlay [showSpinner]="loading">
+  <div class="container">
+    <carousel>
+      <slide *ngFor="let image of images; let i = index">
+        <a target="_blank" href="{{(image.plataforma_banner_link)?image.plataforma_banner_link:'/product/'+image.plataforma_banner_url}}">
+          <img class="d-block w-100" [src]="image.plataforma_banner_arquivo" alt="First slide">
+        </a>
+      </slide>
+    </carousel>
+  </div>
+</app-spinner-overlay>

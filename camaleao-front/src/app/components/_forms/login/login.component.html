@@ -1,0 +1,18 @@
+<form>
+  <div class="md-form">
+    <input type="email" id="loginEmail" name="email" class="form-control" mdbInput [(ngModel)]="model.email" email>
+    <label for="loginEmail">E-mail</label>
+  </div>
+
+  <div class="md-form mb-2">
+    <input type="password" id="loginPassword" name="password" class="form-control" mdbInput [(ngModel)]="model.password">
+    <label for="loginPassword">Password</label>
+  </div>
+
+  <div class="forget text-left small">
+    Esqueceu a senha? <a (click)="forgot.emit()">Clique aqui</a>
+  </div>
+
+  <button mdbBtn color="info" block="true" class="my-4 mx-auto" type="submit" (click)="submit()">Entrar</button>
+
+</form>

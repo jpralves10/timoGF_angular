@@ -1,0 +1,54 @@
+<app-spinner-overlay [showSpinner]="loading">
+  <div class="page" >
+    <div class="container " *ngIf="product">
+      <div class="carousel">
+        <carousel>
+          <slide *ngFor="let image of product.fotos; let i = index" class="w-100 text-center">
+            <img class="d-block mx-auto img-fluid" [src]="image.produto_foto_arquivo" alt="First slide">
+          </slide>
+        </carousel>
+      </div>
+    </div>
+    <div class="container-fluid bg-white" *ngIf="product">
+      <div class="container py-3 py-sm-5">
+        <div class="row">
+          <div class="col-12 col-md-6 d-flex">
+            <h4 class="my-auto font-weight-bolder">{{product.produto_nome}}</h4>
+          </div>
+          <div class="col-12 col-md-6 text-right">
+            <h4>
+              <mdb-badge *ngIf="product.produto_exibir_preco === '1'" [default]="true">
+                {{product.produto_preco | currency: 'BRL'}}
+              </mdb-badge>
+                <button
+                  type="button" 
+                  mdbBtn color="primary" 
+                  (click)="setFavorit(product)"  
+                  mdbWavesEffect>
+                  <i *ngIf="!favorito" class="far fa-heart"></i>
+                  <i *ngIf="favorito" class="fas fa-heart"></i>
+                  &nbsp;Favoritos
+                </button>
+
+                <button 
+                  type="button" 
+                  mdbBtn color="primary" 
+                  (click)="openUrl(product.produto_tipo_botao)"  
+                  mdbWavesEffect>
+                  <fa name="phone" style="color:white" class=""></fa> 
+                  &nbsp;{{getTypeLabel(product.produto_tipo_botao)}}
+                </button>
+            </h4>
+          </div>
+        </div>
+        <div class="content" [innerHTML]="product.produto_descricao"></div>
+        <div class="py-2">
+          <div class="embed-responsive embed-responsive-16by9 my-2 my-md-4" *ngIf="product.produto_video">
+            <iframe class="embed-responsive-item" [src]="product.produto_video" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</app-spinner-overlay>

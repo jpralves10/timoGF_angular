@@ -1,0 +1,110 @@
+
+.testes-container{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.testes-header{
+    background: #2E6777;
+    width: 100%;
+    height: 180px;
+
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.login-img{
+    margin-top: 30px;
+}
+
+.testes-content{
+    height: 100%;
+}
+
+.testes-main{
+    width: 70%;
+    height: 874px;
+    background: #fff;
+
+    margin-top: -70px;
+    margin-bottom: 60px;
+    border-radius: 0.3rem;
+}
+
+.head-options{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.head-right{
+    float: right;
+}
+
+.head-filtrar{
+    font-size: 22px;
+    color: #2E6777;
+    margin-right: 40px;
+}
+
+.head-testes{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.head-btn{
+    width: 160px;
+    height: 44px;
+    background: #2E6777;
+    border: none;
+    border-radius: 0.3rem;
+    color: #fff;
+
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+/* Table */
+
+.table-class{
+    width: 100%;
+}
+
+.table-class-pagination{
+    margin-top: 30px;
+}
+
+.table-tr{
+    cursor: pointer;
+}
+
+.table-tr:hover{
+    background: #C8C8C8;
+}
+
+.pagination .page-item.active .page-link{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.2s linear;
+    border-radius: 0.125rem;
+    background-color: #2E6777;
+    color: #fff;
+}
+
+.th-class{
+    padding: 10px;
+    padding-left: 50px;
+    border-bottom: 0.1rem solid #E9E9E9;
+    color: #2B2A29;
+}
+
+.th-thead-class{
+    color: #737373;
+}
+
+.fa-times-circle:before {
+    content: "";
+    font-size: 1.2rem;
+    margin-right: 5px;
+}

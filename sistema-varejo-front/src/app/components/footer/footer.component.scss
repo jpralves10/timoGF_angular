@@ -1,0 +1,29 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.footer {
+  background-color: #015B9C;
+}
+.logo {
+  height: 70px;
+}
+p{
+  color: white;
+  font-family: Helvetica Neue, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 0.8rem;
+  }
+  fa {
+    font-size: 15px;
+  }
+}
+
+.tamanho-fonte-itens {
+  font-size: 0.9rem;
+}
+
+.tamanho-fonte-direitos {
+  font-size: 0.8rem;
+}

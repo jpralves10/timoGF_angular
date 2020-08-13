@@ -1,0 +1,224 @@
+<div #compareDailyModal="bs-modal" bsModal class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myBasicModalLabel" aria-hidden="true">
+
+        <div class="row d-flex justify-content-center" role="document">
+            <app-spinner-overlay [showSpinner]="loading">
+
+                <div class="wrapper d-flex justify-content-center">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close pull-left" aria-label="Close" (click)="hide()">
+                                <span class="close-x" aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12 mx-auto login d-flex">
+                                <div class="text-center justify-content-center align-self-center mx-auto modal-entrar">
+                                    <h3 class="pb-3 title">Comparação diária <!--i class="fas fa-question-circle"></i--></h3>
+
+                                    <div>
+                                        <label for="loginNome" class="label-question">Selecione o dia que quer comparar</label>
+                                        <br/><br/>
+                                        <div class="group-check">
+                                            <label class="form-check-inline label-check" for="dia">
+                                                <input class="form-check-input" type="radio" name="dia" id="dia0" [value]="0" (change)="changeDia(0)">
+                                                Ontem
+                                            </label>
+                                            <label class="form-check-inline label-check" for="dia">
+                                                <input class="form-check-input" type="radio" name="dia" id="dia1" [value]="1" (change)="changeDia(1)">
+                                                Anteontem
+                                            </label>
+                                        </div>
+
+                                        <label for="loginNome" class="label-question">De 0 a 10, qual era a sua expectativa para o dia selecionado?</label><br/>
+                                        <div class="group-check">
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa0" [value]="0" (change)="changeExpectativa(0)">
+                                                0
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa1" [value]="1" (change)="changeExpectativa(1)">
+                                                1
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa2" [value]="2" (change)="changeExpectativa(2)">
+                                                2
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa3" [value]="3" (change)="changeExpectativa(3)">
+                                                3
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa4" [value]="4" (change)="changeExpectativa(4)">
+                                                4
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa5" [value]="5" (change)="changeExpectativa(5)">
+                                                5
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa6" [value]="6" (change)="changeExpectativa(6)">
+                                                6
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa7" [value]="7" (change)="changeExpectativa(7)">
+                                                7
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa8" [value]="8" (change)="changeExpectativa(8)">
+                                                8
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa9" [value]="9" (change)="changeExpectativa(9)">
+                                                9
+                                            </label>
+                                            <label class="form-check-inline label-check" for="expectativa">
+                                                <input class="form-check-input" type="radio" name="expectativa" id="expectativa10" [value]="10" (change)="changeExpectativa(10)">
+                                                10
+                                            </label>
+                                        </div>
+
+
+                                        <label for="loginNome" class="label-question">De 0 a de 10, como esta o seu fluxo de chamadas para o dia selecionado?</label><br/>
+                                        <div class="group-check">
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo0" [value]="0" (change)="changeFluxo(0)">
+                                                0
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo1" [value]="1" (change)="changeFluxo(1)">
+                                                1
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo2" [value]="2" (change)="changeFluxo(2)">
+                                                2
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo3" [value]="3" (change)="changeFluxo(3)">
+                                                3
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo4" [value]="4" (change)="changeFluxo(4)">
+                                                4
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo5" [value]="5" (change)="changeFluxo(5)">
+                                                5
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo6" [value]="6" (change)="changeFluxo(6)">
+                                                6
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo7" [value]="7" (change)="changeFluxo(7)">
+                                                7
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo8" [value]="8" (change)="changeFluxo(8)">
+                                                8
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo9" [value]="9" (change)="changeFluxo(9)">
+                                                9
+                                            </label>
+                                            <label class="form-check-inline label-check" for="fluxo">
+                                                <input class="form-check-input" type="radio" name="fluxo" id="fluxo10" [value]="10" (change)="changeFluxo(10)">
+                                                10
+                                            </label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="faturou" class="login-label label-question">Quanto faturou neste dia?</label>
+                                            <input 
+                                                type="text" 
+                                                id="faturou" 
+                                                name="faturou"
+                                                [specialCharacters]="[ '[' ,']' , '\\' ]"
+                                                [patterns]="customPatterns"
+                                                prefix="R$ " mask="0000000000"
+                                                class="form-control input-login" 
+                                                mdbInput [(ngModel)]="compare.faturou" 
+                                                faturou >
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="faturado" class="login-label label-question">Quanto gostaria de ter faturado?</label>
+                                            <input 
+                                                type="text" 
+                                                id="faturado" 
+                                                name="faturado"
+                                                [specialCharacters]="[ '[' ,']' , '\\' ]"
+                                                [patterns]="customPatterns"
+                                                prefix="R$ " mask="0000000000"
+                                                class="form-control input-login" 
+                                                mdbInput [(ngModel)]="compare.faturado" 
+                                                faturado >
+                                        </div>
+
+
+                                        <label for="loginNome" class="label-question">Como você avaliaria o dia?</label>
+                                        <br/><br/>
+                                        <div class="group-check">
+                                            <label class="form-check-inline label-check" for="avaliacao">
+                                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao0" [value]="0" (change)="changeAvaliacao(0)">
+                                                Ruim
+                                            </label>    
+                                            <label class="form-check-inline label-check" for="avaliacao">
+                                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao1" [value]="1" (change)="changeAvaliacao(1)">
+                                                Regular
+                                            </label>
+                                            <label class="form-check-inline label-check" for="avaliacao">
+                                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao2" [value]="2" (change)="changeAvaliacao(2)">
+                                                Bom
+                                            </label>
+                                            <label class="form-check-inline label-check" for="avaliacao">
+                                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao3" [value]="3" (change)="changeAvaliacao(3)">
+                                                Excelente
+                                            </label>
+                                        </div>
+                                        
+                                        <br/><br/>
+
+                                        <p style="text-align: left;">
+                                            Garanta que os valores informados sejam reais para que a comparação seja verídica.
+                                            Não divulgaremos seus dados e inserções.
+                                        </p>
+
+                                        <p class="provedor">
+                                            <a (click)="showTextContate()"><i class="fas fa-info-circle"></i> Contate seu provedor para o preenchimento automático das informações</a>
+                                        </p>
+
+                                        <div *ngIf="contate" class="contate-text">
+                                            <span class="contate-span">
+                                                Contate o seu sistema de gestão para relatórios mais detalhados.
+                                            </span>
+                                            
+                                            <span class="contate-span">
+                                                Compare qualquer dia e mês do ano, produtos mais vendidos e melhores horários do setor.
+                                            </span>
+                                            
+                                            <span class="contate-span">
+                                                Tudo isso de formula automática, gratuita e sigilosa.
+                                            </span>
+                                            
+                                            <span class="contate-span">
+                                                Peça para o seu provedor entrar em contato conosco.
+                                            </span>
+                                        </div>
+                                        
+                                        <button mdbBtn block="true" class="my-4 mx-auto login-button" type="submit" (click)="submit()">
+                                            E N V I A R
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </app-spinner-overlay>
+        </div>
+
+</div>

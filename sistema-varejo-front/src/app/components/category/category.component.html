@@ -1,0 +1,8 @@
+<div class="text-center" [class.selected]="isSelected">
+  <img src="https://via.placeholder.com/150"
+       (error)="category.categoria_imagem = 'https://via.placeholder.com/150'"
+       [src]="category.categoria_imagem"
+       (click)="select()"
+       alt="" class="img-fluid rounded-circle mx-auto d-block">
+  <p class="mt-2 mb-0 text-muted">{{ category.categoria_nome }}</p>
+</div>

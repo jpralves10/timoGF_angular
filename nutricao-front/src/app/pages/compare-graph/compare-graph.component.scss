@@ -1,0 +1,359 @@
+.section{
+    width: 100%;
+}
+
+.section-grid-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section-grid {
+    /*display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 50px;*/
+    
+    padding: 40px 40px;
+    border: 1.5px solid #e6e6e6!important;
+    margin-bottom: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
+
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    justify-items: center;
+    align-items: center;
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section-grid-graph {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    
+    padding: 40px 40px;
+    border: 1.5px solid #e6e6e6!important;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    justify-items: center;
+    align-items: center;
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section-grid-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-column-gap: 10px; */
+    /* padding: 40px 40px; */
+    /* border: 1.5px solid #e6e6e6 !important; */
+    /* margin-bottom: 40px; */
+    margin-right: 0px;
+    margin-left: 0px;
+    /* border-radius: 0.3rem; */
+    /* font-size: 1.2rem; */
+    /* justify-items: center; */
+    /* align-items: center; */
+
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section-grid-middle-this {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 50px;
+    
+    padding: 40px 40px;
+    border: 1.5px solid #e6e6e6!important;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    justify-items: center;
+    align-items: center;
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.two{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.title-this{
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.text-abaixo{
+    color: #E74C3C;
+}
+
+.text-acima{
+    color: #52BE80;
+}
+
+.text-this{
+    color: #566573;
+    font-size: 1.1rem;
+}
+
+.btn-comparar{
+    background-color: #319af5!important;
+    color: #fff;
+    padding: 0.8rem 2.3rem;
+    //margin: 20px 0 0 0;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.head-title-comparar{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #29323b;
+}
+
+.head-subtitle-comparar{
+    color: #566573;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.title-comparar {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.span-comparar {
+    font-size: 1.8rem;
+    color: #319af5;
+    font-weight: 600;
+}
+
+.body-comparar {
+    color: #566573;
+}
+
+.title-graph{
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+}
+
+
+
+.progress{
+    margin-top: 25px;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.progress-red{
+    background-color: #fb2e2e;
+}
+
+.progress-orange{
+    background-color: #ff834e;
+}
+
+.progress-yellow{
+    background-color: #f4ec00;
+}
+
+.progress-green{
+    background-color: #48c43a;
+}
+
+// Top
+
+.progress-top{
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.progress-top-color{
+    background-color: #fff;
+    color: #000;
+
+    -webkit-box-shadow: 0 0 5px 1px #566573;
+    -moz-box-shadow: 0 0 5px 1px #566573;
+    box-shadow: 0 0 5px 1px #566573;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.progress-top-color-outhers{
+    background-color: #fff;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.seta-baixo:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #000;
+
+    margin-bottom: -120px;
+    margin-left: -145px;
+}
+
+//bottom
+
+.progress-buttom{
+    margin-top: 25px;
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.progress-buttom-color{
+    background-color: #fff;
+    color: #000;
+
+    -webkit-box-shadow: 0 0 5px 1px #566573;
+    -moz-box-shadow: 0 0 5px 1px #566573;
+    box-shadow: 0 0 5px 1px #566573;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.progress-buttom-color-outhers{
+    background-color: #fff;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.seta-cima:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #000;
+
+    margin-left: -145px;
+    margin-top: 1px;
+}
+
+
+.progress-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.progress-text{
+    color: #566573;
+    font-size: 1rem;
+}
+
+
+.legendas{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: right;
+}
+
+.leg-negocio{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+
+    width: 25px;
+    height: 25px;
+    background: #fb2e2e;
+}
+
+.leg-londrina{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+
+    width: 25px;
+    height: 25px;
+    background: #6bacd7;
+}
+
+.leg-brasil{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+
+    width: 25px;
+    height: 25px;
+    background: #afafaf;
+}
+
+.title-negocio{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.title-londrina{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.title-brasil{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}

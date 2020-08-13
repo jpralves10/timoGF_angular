@@ -1,0 +1,3 @@
+<app-spinner-overlay [showSpinner]="loadingProducts">
+    <app-list-product [products]="products" [showSeeMore]="showSeeMore" (onSeeMore)="getFavorites()"></app-list-product>
+</app-spinner-overlay>

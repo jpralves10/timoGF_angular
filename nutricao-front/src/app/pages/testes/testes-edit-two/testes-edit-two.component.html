@@ -1,0 +1,270 @@
+<div class="container-fluid testes-container">
+    <header class="row testes-header d-flex justify-content-center">
+        <div class="login-img">
+            <a routerLink="/testes">
+                <img src="/assets/nutricao/nutrição-inteligente-nortox-LOGO.png" *ngIf="!imgURL">
+            </a>
+        </div>
+    </header>
+    <div class="d-flex justify-content-center testes-content">
+        <div role="main" class="testes-main d-flex justify-content-center">
+            
+            <div class="container">
+
+                <div class="row head-options">
+                    <div class="head-testes">
+                        <a class="head-testes" (click)="voltarEditOne()">
+                            <i class="fas fa-chevron-left icon-left"></i>  Voltar
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-center" style="padding: 0;">
+                        <!-- New Display -->
+                        <h5 class="ajuste-fino">ANÁLISE AJUSTE FINO:</h5>
+                    </div>
+                </div>
+
+                <!-- Tabela 11 -->
+                <div id="table-11" class="row table-row">
+                    <div class="col">
+                        <table class="table-class">
+                            <tbody>
+                                <tr>
+                                    <th class="col-class col-thead-class col-width col-background">Prod. Esperada</th>
+                                    <th class="col-class col-thead-class col-width col-background" rowspan="2">Cultura Instalada</th>
+                                    <th class="col-class col-thead-class col-width col-background">Aplicação</th>
+                                    <th class="col-class col-thead-class col-width col-background">PRNT</th>
+                                    <th class="col-class col-thead-class col-width col-background">%CaO</th>
+                                    <th class="col-class col-thead-class col-width col-background">%MgO</th>
+                                    <th class="col-class col-thead-class col-width col-background">Recomendação KCI</th>
+                                    <th class="col-class col-thead-class col-width col-background">Aplicação KCI</th>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-background">Kg/há</td>
+                                    <td class="col-class col-background">Calcário</td>
+                                    <td class="col-class col-background" colspan="3">%</td>
+                                    <td class="col-class col-background">kg/há</td>
+                                    <td class="col-class col-background"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_11_col_1" name="table_11_col_1" class="form-control col-input" mdbInput [(ngModel)]="model.table_11_col_1" table_11_col_1 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <select class='form-control col-input' [(ngModel)]="model.table_11_col_2" [disabled]="model.editModel">
+                                            <option 
+                                                *ngFor="let cultura of culturas; let i = index"
+                                                [value]="cultura">
+                                                {{cultura}}
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_11_col_3" name="table_11_col_3" class="form-control col-input" mdbInput [(ngModel)]="model.table_11_col_3" table_11_col_3 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_11_col_4" name="table_11_col_4" class="form-control col-input" mdbInput [(ngModel)]="model.table_11_col_4" table_11_col_4 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_11_col_5" name="table_11_col_5" class="form-control col-input" mdbInput [(ngModel)]="model.table_11_col_5" table_11_col_5 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_11_col_6" name="table_11_col_6" class="form-control col-input" mdbInput [(ngModel)]="model.table_11_col_6" table_11_col_6 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_11_col_7" name="table_11_col_7" class="form-control col-input" mdbInput [(ngModel)]="model.table_11_col_7" table_11_col_7 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_11_col_8" name="table_11_col_8" class="form-control col-input" mdbInput [(ngModel)]="model.table_11_col_8" table_11_col_8 [readonly]="model.editModel" (change)="calculaTabAplicacao()">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabela 12 -->
+                <div id="table-12" class="row table-row">
+                    <div class="col">
+                        <table class="table-class">
+                            <tbody>
+                                <tr>
+                                    <th class="col-class col-thead-class col-width col-background">Ca</th>
+                                    <th class="col-class col-thead-class col-width col-background">Mg</th>
+                                    <th class="col-class col-thead-class col-width col-background">K</th>
+                                    <th class="col-class col-thead-class col-width col-background">H</th>
+                                    <th class="col-class col-thead-class col-width col-background">AI</th>
+                                    <th class="col-class col-thead-class col-width col-background">H + AI</th>
+                                    <th class="col-class col-thead-class col-width col-background">Recomendação de Calagem</th>
+                                    <th class="col-class col-thead-class col-width col-background">Aplicação Calcário</th>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-background" colspan="6">(cmol/dm3) - Antes da correção</td>
+                                    <td class="col-class col-background" colspan="2">Kg/há</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_1" name="table_12_col_1" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_1" table_12_col_1 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_2" name="table_12_col_2" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_2" table_12_col_2 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_3" name="table_12_col_3" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_3" table_12_col_3 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_4" name="table_12_col_4" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_4" table_12_col_4 [readonly]="model.editModel" (change)="formula39()">
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_5" name="table_12_col_5" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_5" table_12_col_5 [readonly]="model.editModel" (change)="formula39()">
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_6" name="table_12_col_6" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_6" table_12_col_6 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_7" name="table_12_col_7" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_7" table_12_col_7 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_12_col_8" name="table_12_col_8" class="form-control col-input" mdbInput [(ngModel)]="model.table_12_col_8" table_12_col_8 [readonly]="model.editModel" (change)="calculaTabAplicacao()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-class-input col-background">
+                                        Tipo do Calcário:
+                                    </td>
+                                    <td class="col-class col-class-input" colspan="2">
+                                        <input 
+                                            type="text" 
+                                            id="tipoCalcario" 
+                                            class="form-control col-input"
+                                            mdbInput [(ngModel)]="model.tipoCalcario"
+                                            readonly>
+                                    </td>
+                                    <td class="col-class col-class-input col-background" colspan="2">
+                                        Melhor momento de aplicação:
+                                    </td>
+                                    <td class="col-class col-class-input" colspan="3">
+                                        <input type="text" id="momentoCalagem" class="form-control col-input" mdbInput [(ngModel)]="model.momentoCalagem" [readonly]="model.editModel">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabela 13 -->
+                <div id="table-13" class="row table-row">
+                    <div class="col">
+                        <table class="table-class">
+                            <tbody>
+                                <tr>
+                                    <th class="col-class col-thead-class col-width col-background">P 15mg/dm3</th>
+                                    <th class="col-class col-thead-class col-width col-background">K (Antes da Correção)</th>
+                                    <th class="col-class col-thead-class col-width col-background">S (Antes da Aplicação)</th>
+                                    <th class="col-class col-thead-class col-width col-background">Recomendação - P205 - (P 18mg/dm3)</th>
+                                    <th class="col-class col-thead-class col-width col-background">Aplicação - P205 - (P 18mg/dm3)</th>
+                                    <th class="col-class col-thead-class col-width col-background">Recomendação S</th>
+                                    <th class="col-class col-thead-class col-width col-background">Complementação Enxofre (S)</th>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-background">ppm (mg/dm3)</td>
+                                    <td class="col-class col-background"></td>
+                                    <td class="col-class col-background"></td>
+                                    <td class="col-class col-background">kg</td>
+                                    <td class="col-class col-background">kg</td>
+                                    <td class="col-class col-background" colspan="2">mg/dm3</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_13_col_1" name="table_13_col_1" class="form-control col-input" mdbInput [(ngModel)]="model.table_13_col_1" table_13_col_1 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_13_col_2" name="table_13_col_2" class="form-control col-input" mdbInput [(ngModel)]="model.table_13_col_2" table_13_col_2 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_13_col_3" name="table_13_col_3" class="form-control col-input" mdbInput [(ngModel)]="model.table_13_col_3" table_13_col_3 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_13_col_4" name="table_13_col_4" class="form-control col-input" mdbInput [(ngModel)]="model.table_13_col_4" table_13_col_4 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_13_col_5" name="table_13_col_5" class="form-control col-input" mdbInput [(ngModel)]="model.table_13_col_5" table_13_col_5 [readonly]="model.editModel">
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_13_col_6" name="table_13_col_6" class="form-control col-input" mdbInput [(ngModel)]="model.table_13_col_6" table_13_col_6 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_13_col_7" name="table_13_col_7" class="form-control col-input" mdbInput [(ngModel)]="model.table_13_col_7" table_13_col_7 [readonly]="model.editModel" (change)="calculaTabAplicacao()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-class-input col-background" colspan="2">
+                                        Melhor momento de aplicação:
+                                    </td>
+                                    <td class="col-class col-class-input" colspan="5">
+                                        <input type="text" id="momentoEnxofre" class="form-control col-input" mdbInput [(ngModel)]="model.momentoEnxofre" [readonly]="model.editModel">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabela 14 -->
+                <div id="table-14" class="row table-row">
+                    <div class="col">
+                        <table class="table-class">
+                            <tbody>
+                                <tr>
+                                    <th class="col-class col-thead-class col-width col-background">Saturação por Bases (V% esperado)</th>
+                                    <th class="col-class col-thead-class col-width col-background">Saturação Ca na CTC (45% a 60%)</th>
+                                    <th class="col-class col-thead-class col-width col-background">Saturação Mg na CTC (13% a 18%)</th>
+                                    <th class="col-class col-thead-class col-width col-background">Saturação K na CTC (3% a 5%)</th>
+                                    <th class="col-class col-thead-class col-width col-background">Ca/Mg</th>
+                                    <th class="col-class col-thead-class col-width col-background">Ca/K</th>
+                                    <th class="col-class col-thead-class col-width col-background">Mg/K</th>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-background">V2</td>
+                                    <td class="col-class col-background" colspan="3">Saturação Esperada</td>
+                                    <td class="col-class col-background" colspan="3">Relações Pós-correção</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_14_col_1" name="table_14_col_1" class="form-control col-input" mdbInput [(ngModel)]="model.table_14_col_1" table_14_col_1 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_14_col_2" name="table_14_col_2" class="form-control col-input" mdbInput [(ngModel)]="model.table_14_col_2" table_14_col_2 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_14_col_3" name="table_14_col_3" class="form-control col-input" mdbInput [(ngModel)]="model.table_14_col_3" table_14_col_3 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_14_col_4" name="table_14_col_4" class="form-control col-input" mdbInput [(ngModel)]="model.table_14_col_4" table_14_col_4 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_14_col_5" name="table_14_col_5" class="form-control col-input" mdbInput [(ngModel)]="model.table_14_col_5" table_14_col_5 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_14_col_6" name="table_14_col_6" class="form-control col-input" mdbInput [(ngModel)]="model.table_14_col_6" table_14_col_6 disabled>
+                                    </td>
+                                    <td class="col-class col-class-input">
+                                        <input type="text" id="table_14_col_7" name="table_14_col_7" class="form-control col-input" mdbInput [(ngModel)]="model.table_14_col_7" table_14_col_7 disabled>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+                <div class="row head-options">
+                    <div class="col d-flex justify-content-center">
+                        <button class="footer-btn" (click)="recomendacaoTeste()">VER RECOMENDAÇÕES</button>
+                        <!--button class="footer-btn" (click)="salvarTeste()">SALVAR</button-->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+ </div>

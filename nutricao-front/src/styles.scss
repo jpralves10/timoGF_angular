@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*body {
+  background-color: white;
+  min-height: 100vh;
+}
+
+html {
+  overflow-y: scroll;
+}
+*/
+
+body,
+html {
+  font-family: 'Lato', sans-serif;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100%;
+  //background-color: white;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  //overflow-y: hidden;
+}
+
+app-root {
+  width: 100%;
+}

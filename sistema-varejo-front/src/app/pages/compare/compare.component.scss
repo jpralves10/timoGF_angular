@@ -1,0 +1,66 @@
+.section{
+    width: 100%;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    grid-column-gap: 50px;
+    
+    padding: 40px 40px;
+    border: 1.5px solid #e6e6e6!important;
+    margin-bottom: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    justify-items: center;
+    align-items: center;
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.btn-comparar{
+    background-color: #319af5!important;
+    color: #fff;
+    padding: 0.8rem 2.3rem;
+    //margin: 20px 0 0 0;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.head-title-comparar{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+    color: #29323b;
+}
+
+.head-subtitle-comparar{
+    color: #566573;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.title-comparar {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 0.4rem;
+}
+
+.span-comparar {
+    font-size: 1.8rem;
+    color: #319af5;
+    font-weight: 600;
+}
+
+.body-comparar {
+    color: #566573;
+}

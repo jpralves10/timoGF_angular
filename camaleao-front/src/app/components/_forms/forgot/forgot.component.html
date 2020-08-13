@@ -1,0 +1,13 @@
+<form>
+  <div class="md-form">
+    <input type="email" id="loginEmail" name="email" class="form-control" mdbInput [(ngModel)]="model.email" email>
+    <label for="loginEmail">E-mail</label>
+  </div>
+
+  <button mdbBtn color="info" block="true" class="my-4 mx-auto" type="submit" (click)="submit()">Recuperar senha</button>
+
+  <p>
+    Não possui acesso? <a routerLink="/signup">Cadastre-se aqui</a>.
+  </p>
+
+</form>

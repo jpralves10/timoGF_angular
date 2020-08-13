@@ -1,0 +1,149 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.area-paciente {
+  color: #D21D0A !important;
+}
+
+.navbar-nav {
+  &:first-child {
+    margin-left: 0 !important;
+  }
+  &:nth-last-child(2) {
+    margin-right: 0 !important;
+  }
+
+  .nav-item {
+    color: #015B9C;
+    font-size: 1em;
+  }
+
+  margin: 0 24.5% 0 25.5%;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .logo {
+    max-height: 100px;
+  }
+}
+
+.menu-home {
+  position: absolute;
+  height: 196px;
+  width: 242px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  right: -28px;
+  top: -15px;
+  padding: 20px;
+  z-index: 5;
+  li{
+    list-style-type: none;
+    a{
+      font-size: 22px;
+      line-height: 50px;
+      color: #000000;
+    }
+  }
+}
+
+.visible-menu{
+  display: block;
+}
+
+@include media-breakpoint-down(md) {
+  img {
+    margin-bottom: -10px;
+    width: 90px;
+  }
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.nav-container{
+  min-height: 49px;
+}
+
+.row-nav{
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+.row-nav-ul{
+  margin: 0;
+  padding: 0;
+}
+
+.nav-option {
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav-cursor {
+  cursor: pointer;
+}
+
+.nav-option-right {
+  float: right;
+}
+
+.nav-option-left {
+  float: left;
+}
+
+.nav-padding {
+  padding: 10px;
+}
+
+.nav-padding-indivar{
+  padding: 10px;
+  padding-left: 0px;
+}
+
+.nav-padding-sair{
+  padding: 10px;
+  padding-right: 0px;
+}
+
+.btn-entrar{
+  background-color: #319af5!important;
+  color: #fff;
+  padding: 0.4rem 2.7rem;
+  border-radius: 4px;
+  box-shadow: none;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.box-shadow{
+  box-shadow: none;
+}
+
+.pl-2, .px-2 {
+  padding-left: 0!important;
+}
+
+.pr-2, .px-2 {
+  padding-right: 0!important;
+}
+
+.pt-2, .py-2 {
+  padding-top: 0.3rem!important;
+}
+
+.mt-4, .my-4 {
+  margin-top: 0!important;
+}
+
+.mb-4, .my-4 {
+  margin-bottom: 0.2rem!important;
+}

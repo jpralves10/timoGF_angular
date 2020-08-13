@@ -1,0 +1,37 @@
+<div class="login-content" role="document">
+    <app-spinner-overlay [showSpinner]="loading">
+
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="col-12 mx-auto login d-flex">
+                    <div class="text-center justify-content-center align-self-center mx-auto modal-entrar" *ngIf="tab === 'login'">
+
+                        <div class="login-img">
+                            <img src="/assets/nutricao/nutrição-inteligente-nortox-LOGO-2.png" *ngIf="!imgURL">
+                        </div>
+
+                        <app-form-login (loading)="loadingShow($event)" (logged)="logged()" (forgot)="tab = 'forgot'"></app-form-login>
+
+                        <!--span class="login-cadastre">
+                            Não possui uma conta? <a class="login-cadastre-link" (click)="signupModal.show(); signUp()">Cadastre-se aqui</a>.
+                        </span-->
+                    </div>
+                    <div class="text-center justify-content-center align-self-center mx-auto modal-entrar" *ngIf="tab === 'forgot'">
+                        
+                        <div class="login-img">
+                            <img src="/assets/nutricao/nutrição-inteligente-nortox-LOGO-2.png" *ngIf="!imgURL">
+                        </div>
+
+                        <p class="text-muted pb-3 esqueceu-text">
+                            Preencha o campo abaixo com o seu e-mail e nós enviaremos
+                            um link para a redefinição de sua senha. 
+                        </p>
+
+                        <app-form-forgot (send)="tab = 'login'" (loading)="loadingShow($event)"></app-form-forgot>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </app-spinner-overlay>
+</div>

@@ -1,0 +1,75 @@
+.login {
+  //margin-top: 150px;
+}
+
+.login-content{
+  margin-top: 150px;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.wrapper{
+  width: 700px;
+  padding-top: 170px;
+}
+
+.modal-header .close {
+  padding: 1rem 0.5rem;
+  margin: -1rem -1rem -1rem 0;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0 1rem 4rem;
+}
+
+.modal-entrar {
+  width: 100%;
+}
+
+.close-x {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  height: 478px;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.login-cadastre{
+  color: #757575;
+  font-size: 1.1rem;
+  font-weight: 200;
+  margin-top: 60px;
+  display: block;
+}
+
+.login-cadastre-link {
+  color: #319af5!important;
+  font-weight: 600;
+}
+
+.esqueceu-text{
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.login-img{
+  margin-top: 30px;
+}

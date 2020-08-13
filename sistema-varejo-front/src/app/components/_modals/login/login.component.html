@@ -1,0 +1,77 @@
+<div #basicModal="bs-modal" bsModal class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myBasicModalLabel" aria-hidden="true">
+
+        <div class="row d-flex justify-content-center" role="document">
+            <app-spinner-overlay [showSpinner]="loading">
+
+                <div class="wrapper">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close pull-left" aria-label="Close" (click)="hide()">
+                                <span class="close-x" aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12 mx-auto login d-flex">
+                                <div class="text-center justify-content-center align-self-center mx-auto modal-entrar" *ngIf="tab === 'login'">
+                                    <h5 class="pb-3 pb-md-5 title">Entrar</h5>
+
+                                    <app-form-login (loading)="loadingShow($event)" (logged)="logged()" (forgot)="tab = 'forgot'"></app-form-login>
+
+                                    <span class="login-cadastre">
+                                        Não possui uma conta? <a class="login-cadastre-link" (click)="signupModal.show(); signUp()">Cadastre-se aqui</a>.
+                                    </span>
+                                </div>
+                                <div class="text-center justify-content-center align-self-center mx-auto modal-entrar" *ngIf="tab === 'forgot'">
+                                    <h5 class="pb-3 pb-md-5 font-weight-bolder" style="font-size: 30px;">Esqueceu a senha?</h5>
+                                    
+                                    <p class="text-muted pb-3 esqueceu-text">
+                                        Preencha o campo abaixo com o seu e-mail e nós enviaremos
+                                        um link para a redefinição de sua senha. 
+                                    </p>
+
+                                    <app-form-forgot (send)="tab = 'login'" (loading)="loadingShow($event)"></app-form-forgot>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </app-spinner-overlay>
+        </div>
+
+</div>
+
+<app-signup #signupModal></app-signup>
+
+<div #atalhoSiteModal="bs-modal" bsModal class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myBasicModalLabel" aria-hidden="true">
+
+        <div class="row d-flex justify-content-center" role="document">
+            <app-spinner-overlay [showSpinner]="loading">
+
+                <div class="wrapper-atalho">
+                    <div class="modal-content-atalho">
+                        <!--div class="modal-header border-bottom-0">
+                            <button type="button" class="close pull-left" aria-label="Close" (click)="hide()">
+                                <span class="close-x" aria-hidden="true">×</span>
+                            </button>
+                        </div-->
+                        <div class="modal-body-atalho">
+                            <div class="col-12 mx-auto login d-flex">
+                                <div class="text-center justify-content-center align-self-center mx-auto">
+                                    <span class="atalho-title">
+                                        Crie um atalho do site
+                                    </span>
+                                    <span class="atalho-text">
+                                        Você sabia que pode criar um atalho do site na sua área de trabalho? Verifique no seu navegador como fazer.
+                                    </span>
+                                    <button class="atalho-btn" (click)="hideAtalho()">O K</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </app-spinner-overlay>
+        </div>
+</div>

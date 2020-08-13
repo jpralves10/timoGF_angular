@@ -1,0 +1,68 @@
+label {
+  height: 21px;
+  color: #737373;
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 22px;
+  text-align: justify;
+}
+
+p {
+  color: #737373;
+  font-family: "Helvetica Neue";
+  font-size: 22px;
+  letter-spacing: 1.83px;
+  line-height: 27px;
+
+}
+
+.form-signup {
+  padding-bottom: 100px;
+  .input-form {
+    background-color: #F0F0F0;
+    border: none;
+    margin-bottom: 20px;
+    height: 66px;
+  }
+  span {
+    color: #737373;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 40px;
+    letter-spacing: 3.33px;
+    line-height: 46px;
+    text-align: center;
+  }
+  input[type=checkbox] {
+    height: 24px;
+    width: 24px;
+    border: 2px solid #979797;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+  .form-check-label {
+    margin-left: 40px;
+    height: 26px;
+    color: #737373;
+    font-family: "Helvetica Neue";
+    font-size: 22px;
+    letter-spacing: 1.83px;
+    line-height: 27px;
+    text-align: center;
+
+  }
+  button {
+    height: 66px;
+    width: 312px;
+    border-radius: 8px;
+    background-color: #015B9C;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 80px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 28px;
+  }
+
+}

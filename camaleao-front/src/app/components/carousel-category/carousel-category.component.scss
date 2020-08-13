@@ -1,0 +1,67 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.subcategory {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: #015B9C;
+}
+
+.arrow-up {
+  color: #015B9C;
+}
+
+:host ::ng-deep {
+
+  .slick-slider {
+    width: 90%;
+    margin: auto;
+  }
+
+  .nav-btn {
+    height: 47px;
+    position: absolute;
+    width: 26px;
+    cursor: pointer;
+    top: 100px !important;
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    color: black !important;
+  }
+
+  .prev-slide.slick-disabled,
+  .next-slide.slick-disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .prev-slide {
+    background: url(https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/nav-icon.cfc2db4891a3a3aa9346.png) no-repeat scroll 0 0;
+    left: -33px;
+  }
+
+  .next-slide {
+    background: url(https://www.freakyjolly.com/demo/Angular/Angular7/slickCarousel/nav-icon.cfc2db4891a3a3aa9346.png) no-repeat scroll -24px 0px;
+    right: -33px;
+  }
+
+  .prev-slide:hover {
+    background-position: 0px -53px;
+  }
+
+  .next-slide:hover {
+    background-position: -24px -53px;
+  }
+
+  .container {
+    padding: 15px !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .size-category {
+    width: 150px;
+    height: 150px;
+  }
+}

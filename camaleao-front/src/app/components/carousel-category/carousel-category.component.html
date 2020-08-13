@@ -1,0 +1,24 @@
+<div class="m-0 m-md-5 ">
+  <div class="d-block bg-white category">
+    
+    <ngx-slick-carousel class="container carousel py-4 px-1 py-md-3 px-md-4 w-100 justify-content-start" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let category of categories; let i = index" class="slide text-center px-3 size-category">
+        <app-category [category]="category" [isSelected]="selectedCategory === category" ></app-category>
+      </div>
+    </ngx-slick-carousel>
+
+    <div class="subcategories" *ngIf="subCategories.length > 0 && showCategories">
+      <div class="mx-auto px-5"> <hr/> </div>
+      <div class="d-flex flex-wrap justify-content-around px-1 px-md-4 py-2 py-md-4">
+        <div *ngFor="let subCategory of subCategories" class="subcategory px-2 px-md-3 py-1 py-md-3">
+          <a (click)="selectSubCategoria(subCategory)">{{subCategory.categoria_nome}}</a>
+        </div>
+      </div>
+      <div class="text-center py-2 py-md-4 arrow-up">
+        <a class="btn-link" (click)="hideSubcategories()">
+          <fa name="arrow-up" size="lg"></fa>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

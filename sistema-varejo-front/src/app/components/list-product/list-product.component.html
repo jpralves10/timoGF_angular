@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="d-flex flex-wrap">
+    <div class="py-2 py-sm-4 product align-content-start" *ngFor="let product of products; let i = index">
+      <app-product [product]="product"></app-product>
+    </div>
+  </div>
+  <div class="text-center mb-4" *ngIf="showSeeMore">
+    <button mdbBtn color="primary" (click)="seeMore()" >VER MAIS</button>
+  </div>
+</div>

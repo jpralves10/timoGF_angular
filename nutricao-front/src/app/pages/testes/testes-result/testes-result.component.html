@@ -1,0 +1,118 @@
+<div class="container-fluid testes-container">
+    <header class="row testes-header d-flex justify-content-center">
+        <div class="login-img">
+            <img src="/assets/nutricao/nutrição-inteligente-nortox-LOGO.png" *ngIf="!imgURL">
+        </div>
+    </header>
+    <div class="row d-flex justify-content-center testes-content">
+        <div role="main" class="testes-main">
+            
+            <div class="container">
+
+                <div class="row row-result-voltar">
+                    <div class="col head-testes" style="margin-left: 30px;">
+                        <a class="head-testes" (click)="testesRecommend()">
+                            <i class="fas fa-chevron-left icon-left"></i>  Voltar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row row-result">
+                    <div class="col d-flex justify-content-center col-result" style="margin-left: 40px;">
+                        <button (click)="alterarTab(0)" [className]="tabActive == 0 ? 'tab-result tab-left tab-active' : 'tab-result tab-left'">MACRONUTRIENTES</button>
+                    </div>
+
+                    <div class="col d-flex justify-content-center col-result" style="margin-right: 40px; margin-left: 25px;">
+                        <button (click)="alterarTab(1)" [className]="tabActive == 1 ? 'tab-result tab-left tab-active' : 'tab-result tab-left'">MICRONUTRIENTES</button>
+                    </div>
+                </div>
+    
+                <div *ngIf="tabActive == 0" class="row row-canvas">
+                    <div class="col">
+                        <canvas id="graph-{{ 0 }}"></canvas>
+                    </div>
+                </div>
+
+                <div *ngIf="tabActive == 1" class="row row-canvas">
+                    <div class="col">
+                        <canvas id="graph-{{ 1 }}"></canvas>
+                    </div>
+                </div>
+
+                <!-- Tabela Macro -->
+                <div *ngIf="tabActive == 0" id="table-macro" class="row table-row">
+                    <div class="col">
+                        <table class="table-class">
+                            <tbody>
+                                <tr>
+                                    <th class="col-class col-thead-class col-width col-background" colspan="2">Nutrientes</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">N (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">P2O5 (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">K2O (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">Ca (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">Mg (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">S (gr)</th>
+                                </tr>
+                                <tr *ngFor="let nutriente of nutrientesMacro">
+                                    <td 
+                                        class="col-class col-background col-align-left" 
+                                        [style.color]="nutriente.fontColor" 
+                                        [style.background]="nutriente.backgroundColor" colspan="2">
+
+                                        <div class="nutri-color" [style.background]="nutriente.colorLegenda"></div>
+                                        {{nutriente.title}}
+                                    </td>
+                                    <td 
+                                        *ngFor="let dado of nutriente.dados" 
+                                        class="col-class col-background"
+                                        [style.color]="nutriente.fontColor" 
+                                        [style.background]="nutriente.backgroundColor">
+                                        {{dado}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabela Micro -->
+                <div *ngIf="tabActive == 1" id="table-macro" class="row table-row">
+                    <div class="col">
+                        <table class="table-class">
+                            <tbody>
+                                <tr>
+                                    <th class="col-class col-thead-class col-width col-background" colspan="2">Nutrientes</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">B (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">Fe (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">Mn (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">Cu (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">Zn (gr)</th>
+                                    <th class="col-class col-thead-class col-width-10 col-background">Mo (gr)</th>
+                                </tr>
+                                <tr *ngFor="let nutriente of nutrientesMicro">
+                                    <td 
+                                        class="col-class col-background col-align-left" 
+                                        [style.color]="nutriente.fontColor" 
+                                        [style.background]="nutriente.backgroundColor" colspan="2">
+
+                                        <div class="nutri-color" [style.background]="nutriente.colorLegenda"></div>
+                                        {{nutriente.title}}
+                                    </td>
+                                    <td 
+                                        *ngFor="let dado of nutriente.dados" 
+                                        class="col-class col-background"
+                                        [style.color]="nutriente.fontColor" 
+                                        [style.background]="nutriente.backgroundColor">
+                                        {{dado}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+            </div>
+                
+        </div>
+    </div>
+</div>

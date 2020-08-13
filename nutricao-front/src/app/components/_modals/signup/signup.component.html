@@ -1,0 +1,79 @@
+<div #signupModal="bs-modal" bsModal class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="myBasicModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog d-flex justify-content-center" role="document">
+            <app-spinner-overlay [showSpinner]="loading">
+
+                <div class="wrapper">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="close pull-left" aria-label="Close" (click)="hide()">
+                                <span class="close-x" aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12 mx-auto login d-flex">
+                                <div class="text-center justify-content-center align-self-center mx-auto modal-entrar">
+                                    <h5 class="pb-3 title">Cadastro</h5>
+
+                                    <p class="cadastro-info">Ainda não possui uma conta em nosso sistema? Cadastre-se para comparar seu 
+                                        faturamento com a concorrência, de forma totalmente segura e sigilosa.</p>
+
+                                    <div>
+                                        <div class="form-group">
+                                            <label for="loginNome" class="login-label">Ramo da empresa</label>
+                                            <select class='form-control input-login' [(ngModel)]="model.ramo">
+                                                <option 
+                                                    *ngFor="let branch of branches; let i = index"
+                                                    [value]="branch.id">
+                                                    {{branch.title.charAt(0).toUpperCase()+branch.title.substr(1).toLowerCase()}}
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="loginNome" class="login-label">Nome da empresa</label>
+                                            <input type="nome" id="loginNome" name="nome" class="form-control input-login" mdbInput [(ngModel)]="model.nome" nome >
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="loginEndereco" class="login-label">Endereço</label>
+                                            <input type="endereco" id="loginEndereco" name="endereco" class="form-control input-login" mdbInput [(ngModel)]="model.endereco" endereco >
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="loginRegiao" class="login-label">Região de atuação</label>
+                                            <input type="regiao" id="loginRegiao" name="regiao" class="form-control input-login" mdbInput [(ngModel)]="model.regiao" regiao >
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="loginEmail" class="login-label">E-mail</label>
+                                            <input type="email" id="loginEmail" name="email" class="form-control input-login" mdbInput [(ngModel)]="model.email" email >
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="loginSenha" class="login-label">Senha</label>
+                                            <input type="senha" id="loginSenha" name="senha" class="form-control input-login" mdbInput [(ngModel)]="model.senha" senha >
+                                        </div>
+
+                                        <div class="form-group" style="margin-bottom: 50px;">
+                                            <label for="loginConfirmar" class="login-label">Confirmar senha</label>
+                                            <input type="confirmar" id="loginConfirmar" name="confirmar" class="form-control input-login" mdbInput [(ngModel)]="model.confirmar" confirmar >
+                                        </div>
+
+                                        <button mdbBtn block="true" class="my-4 mx-auto login-button" type="submit" (click)="submit()">
+                                            C A D A S T R A R
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </app-spinner-overlay>
+        </div>
+
+</div>

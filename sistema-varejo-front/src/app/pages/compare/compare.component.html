@@ -1,0 +1,77 @@
+<div>
+
+    <div class="section">
+        <div class="container">
+            <p class="head-title-comparar">Compare seu faturamento com o da concorrência!</p>
+            <p class="head-subtitle-comparar">Seus dados permanecerão sob sigilo</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+
+            <div class="row section-grid">
+                <div>
+                    <p class="title-comparar">Comparação</p>
+                    <span class="span-comparar">em tempo real</span>
+                </div>
+
+                <div class="body-comparar">
+                    Informe o seu caixa até o momento e veja como está a sua empresa em relação às demais.
+                </div>
+
+                <div>
+                    <button class="btn-comparar" (click)="compareRealModal.show();">C O M P A R A R</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="container two">
+            
+            <div class="row section-grid">
+                <div>
+                    <p class="title-comparar">Comparação</p>
+                    <span class="span-comparar">diária</span>
+                </div>
+
+                <div class="body-comparar">
+                    Informe o caixa do último ou penúltimo dia e compare o seu negócio com a concorrência.
+                </div>
+
+                <div>
+                    <button class="btn-comparar" (click)="compareDailyModal.show();">C O M P A R A R</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container two">
+        
+            <div class="row section-grid">
+                <div>
+                    <p class="title-comparar">Comparação</p>
+                    <span class="span-comparar">mensal</span>
+                </div>
+
+                <div class="body-comparar">
+                    Informe o caixa do mês anterior e compare o seu negócio com a concorrência.
+                </div>
+
+                <div>
+                    <button class="btn-comparar" (click)="compareMonthlyModal.show();">C O M P A R A R</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+<app-compare-real #compareRealModal></app-compare-real>
+<app-compare-daily #compareDailyModal></app-compare-daily>
+<app-compare-monthly #compareMonthlyModal></app-compare-monthly>

@@ -1,0 +1,61 @@
+<header class="m-0 bg-white border-bottom">
+  <div class="px-2 container">
+    <div class="row ml-0 mr-0 mt-4 mb-4 pt-2 align-items-center">
+      <div class="col-1 d-none d-md-flex">
+        <a href="" routerLink="/"><img src="/assets/logo.png" class="img-fluid logo" alt=""></a>
+        </div>
+      <div class="col-4 d-none d-md-flex">
+        <div class="input-group">
+          <input class="form-control" type="text" [(ngModel)]="search" (keyup.enter)="searchProducts()" placeholder="O que está procurando?">
+          <div class="input-group-append">
+            <div class="btn-group">
+              <button type="button" mdbBtn color="primary" size="sm" (click)="searchProducts()" mdbWavesEffect><fa name="search" size="lg"></fa></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-7">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand d-flex d-md-none align-items-center " href="#">
+            <img src="/assets/logo.png" class="img-fluid logo" alt="">
+            <!--      <button class="input-group-text btn btn-outline-secondary float-right" type="button"><fa name="search"></fa></button>-->
+          </a>
+          <button class="navbar-toggler" type="button" (click)="isHide=!isHide" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse font-weight-bolder justify-content-between" id="navbarNavAltMarkup" [class.hide]="isHide" [class.show]="!isHide">
+            <div class="mx-0">
+              <a class="nav-item nav-link active" routerLink="/">SERVIÇOS <span class="sr-only">(current)</span></a>
+            </div>
+            <div class="mx-0">
+              <a class="nav-item nav-link active" routerLink="/about">SOBRE NÓS</a>
+            </div>
+            <!--<div class="mx-0">
+              <a class="nav-item nav-link active" routerLink="/favorite">FAVORITOS</a>
+            </div>-->
+            <div class="mx-0 text-right btn-group" mdbDropdown>
+              <a dropdownToggle mdbWavesEffect class="nav-link waves-light area-paciente font-weight-bolder dropdown-toggle ml-auto">
+          <span [class.d-none]="isLogged">
+            <fa name="user" size="lg"></fa>  &nbsp;
+            <a (click)="loginModal.show()">ÁREA DO PACIENTE </a>
+          </span>
+                <span [class.d-none]="!isLogged">
+            <fa name="user" size="lg"></fa>
+            Olá, {{user?.name}}<span class="caret"></span>
+          </span>
+              </a>
+              <div  *dropdownMenu class="dropdown-menu dropdown dropdown-primary"  role="menu" [class.d-none]="!isLogged">
+                <a class="dropdown-item" data-toggle="modal" data-target="#carteirinhaModal">Carteirinha virtual</a>
+                <a class="dropdown-item" routerLink="/favorite">Favoritos</a>
+                <a class="dropdown-item" (click)="logout()">Sair</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<app-modal-card *ngIf="user" [userData]="user"></app-modal-card>
+<app-modal-login #loginModal></app-modal-login>

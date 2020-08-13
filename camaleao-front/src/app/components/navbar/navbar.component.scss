@@ -1,0 +1,65 @@
+@import '~bootstrap/scss/bootstrap-grid';
+
+.area-paciente {
+  color: #D21D0A !important;
+}
+
+.navbar-nav {
+  &:first-child {
+    margin-left: 0 !important;
+  }
+  &:nth-last-child(2) {
+    margin-right: 0 !important;
+  }
+
+  .nav-item {
+    color: #015B9C;
+    font-size: 1em;
+  }
+
+  margin: 0 24.5% 0 25.5%;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .logo {
+    max-height: 100px;
+  }
+}
+
+.menu-home {
+  position: absolute;
+  height: 196px;
+  width: 242px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  right: -28px;
+  top: -15px;
+  padding: 20px;
+  z-index: 5;
+  li{
+    list-style-type: none;
+    a{
+      font-size: 22px;
+      line-height: 50px;
+      color: #000000;
+    }
+  }
+}
+
+.visible-menu{
+  display: block;
+}
+
+@include media-breakpoint-down(md) {
+  img {
+    margin-bottom: -10px;
+    width: 90px;
+  }
+}

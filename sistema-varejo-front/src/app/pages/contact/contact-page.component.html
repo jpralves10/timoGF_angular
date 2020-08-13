@@ -1,0 +1,22 @@
+<div class="w-100 footer bg-white">
+    <div class="text-center text-sm-left">
+        <div class="row pt-5 align-items-center ml-0 pl-0">
+            <div class="col-12 col-sm-6 ">
+                <div class="row">
+                    <div class="col-12 col-sm-10 align-items-center d-flex row">
+                        <span class="contact-title mb-8">Fale conosco</span>
+                        <ul *ngIf="contact">
+                            <li>{{contact.contato_horario}}</li>
+                            <li>{{contact.contato_endereco}}</li>
+                            <li>FONE: {{contact.contato_telefone}} / {{contact.contato_whatsapp}}</li>
+                            <li>{{contact.contato_email}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <img src="assets/image_placeholder.png">
+            </div>
+        </div>
+    </div>
+</div>

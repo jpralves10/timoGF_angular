@@ -1,0 +1,27 @@
+<app-spinner-overlay [showSpinner]="loading">
+  <div class="container page">
+    <div class="carousel">
+      <carousel>
+        <slide *ngFor="let image of images; let i = index" class="w-100 text-center">
+          <img class="d-block mx-auto img-fluid" [src]="image.plataforma_conteudo_texto" alt="First slide">
+        </slide>
+      </carousel>
+    </div>
+  </div>
+  <div class="container-fluid bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" *ngFor="let section of sections">
+          <h4 class="text-muted py-3 py-sm-4">{{section.plataforma_conteudo_nome}}</h4>
+          <div class="content mb-5" [innerHTML]="section.plataforma_conteudo_texto"></div>
+        </div>
+      </div>
+      <div class="py-2">
+        <div class="embed-responsive embed-responsive-16by9 my-2 my-md-4" *ngFor="let video of videos">
+          <iframe class="embed-responsive-item" [src]="video.plataforma_conteudo_texto" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</app-spinner-overlay>

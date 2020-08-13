@@ -1,0 +1,138 @@
+
+.modal {
+    overflow-y: auto;
+}
+  
+.title {
+    //font-size: 2.3rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+.wrapper{
+    width: 740px;
+    padding-top: 50px;
+}
+
+.modal-header .close {
+    padding: 1rem 0.5rem;
+    margin: -1rem -1rem -1rem 0;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 0 1rem 4rem;
+}
+
+.modal-entrar {
+    width: 90%;
+}
+
+.close-x {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.8rem;
+    outline: 0;
+}
+
+.login-cadastre{
+    color: #757575;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.login-cadastre-link {
+    color: #319af5!important;
+    font-weight: 600;
+}
+
+
+
+form {
+    color: #757575;
+}
+
+.remember {
+    min-width: 160px;
+}
+
+.input-login {
+    height: calc(2.1em + 0.75rem + 2px);
+    background: #e9e9e9;
+    border: none;
+}
+
+.login-label {
+    float: left;
+}
+
+.login-button{
+    background-color: #319af5 !important;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    padding: 0.9rem 5rem;
+    border: none;
+    width: 40%;
+}
+
+.login-esqueceu {
+    float: right;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+
+.cadastro-info {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.8em + 0.75rem + 2px);
+}
+
+.provedor{
+    text-align: left;
+    color: #319af5;
+    font-weight: 500;
+}
+
+.label-check{
+    font-weight: 500;
+}
+
+.group-check{
+    margin-bottom: 10px;
+    float: left;
+}
+
+.label-question{
+    font-weight: 500;
+    font-size: 1.1rem;
+    float: left;
+}
+
+input[type="radio"]{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.fa-question-circle:before {
+    content: "";
+    font-size: 20px;
+    color: #319af5 !important;
+}
